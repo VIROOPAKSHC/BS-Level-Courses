@@ -109,3 +109,41 @@ However, by reordering our assumption's inequality, it is clear that L<sub>a</su
 Hence, the reduced cost is greater than the additional cost to be paid, proving a contradiction to our assumption, i.e. a more optimal inequality than the assumed inequality.
 
 ### Scheduling Classes Problem:
+
+Consider, there is a dance academy which offers classes on Saturdays for hobbyists who want to pick up a little bit of dance. So, the classes are offered at a different periods of times in the day and do not want an overlap. The goal is to maximize the number of different classes that can be adjusted to register for. 
+
+Each class has a ( S<sub>p</sub>, f<sub>p</sub> ). The following is the schedule and a new comer has to pick up only non-mutual conflicting but can pick classes where one's starting time is the same as the other's ending time:
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/096fe016-b4d8-436c-b57f-b620889681aa)
+
+Possible strategies:
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/8a1bf56a-2086-4b29-873a-79643e2caa9d)
+
+But all the strategies fail to give the optimal scheduling. 
+
+The strategy that works is: <b> Choose the class the ends first.</b>. In action:
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/2a614db8-b800-4073-8ef4-f737226d9a89)
+
+The green ones are selected and the red ones represent the clash/conflict.
+
+The algorithm: <br>
+&emsp;Sort clases by finish time. <br>
+&emsp;count = 0, X = &Phi;<br>
+&emsp;while a class is still available:<br>
+&emsp;&emsp;add the first class to X & remove it.<br>
+&emsp;&emsp;remove all classes that conflict with C.<br>
+
+### Derivation:
+
+<b>Lemma</b>: At least one optimal conflict free collection of classes includes the one that finishes first.
+
+<b>Proof by induction:</b>
+<b>Theorem: The greedy schedule is optimal</b>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/ee89cc6a-bf43-428c-bf47-0d773c44af29)
+
+Another proof:
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/ad622603-8203-4141-93d1-26edea55a4ad)
+
+
