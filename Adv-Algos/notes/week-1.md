@@ -147,3 +147,50 @@ Another proof:
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/ad622603-8203-4141-93d1-26edea55a4ad)
 
 
+### Stable Matching problem:
+
+Given 2 groups of "agents" which require a mapping between them while having preferences, the problem is to find an optimal matching so that both the groups are satisfied.  
+
+Possible agents can be: (doctors, hospitals),  <b> (men, women) in a dating website </b>, (students, colleges), (jobs, applicants).
+
+Preferences/Rankings are domain and context-dependent, not for us to worry, already made. Assume that the Rankings are complete and strict. The matchings can be of any cardinality but to keep the discussion simple we consider - one-to-one matching/mapping.
+
+Total no. of agents = 2N (N women + N men) 
+
+It might not always be in a way to ensure that the matching caters the happiness/satsifaction of every agent in the domain, because of the constrained one-to-one cardinality. 
+
+Consider a matching like the following:
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/b9d81778-4927-4961-9cf3-446be9821630)
+
+Now, an unstable or blocking pair in a matching is one where the agents prefer another agents than the ones they are currently mapped to.
+
+Consider in the above case, Raj prefers working with Giggle than with Amazing. This does not make any pair a blocking pair because we do no know what Giggle feels about Raj. However, if Giggle displays admiration for Raj over Lata, then we have a blocking pair (Giggle-Raj) because they are not happy with their current partners and are interested in another partners. 
+
+In general, we would like matching with no Blocking pairs. (Remember the feeling has to be mutual). But this is not always possible.
+
+<b>Goal:</b> Find a matching that minimizes the number of blocking pairs.
+
+[ <b> Utopia </b>: A matching with no blocking pairs. Where everyone is happy. ]
+
+<b>Ideas: </b>
+
+<li> Start with any matching. If there is a blocking pair, rematch with their favorable partner and <b>Hopefully</b> there won't be newer ones. [Most probably we are going to be in a while loop. This greed is never-ending.]</li> <br> ["All the preferences should be consistent."]
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/76be4f84-752e-4a60-b637-fd3d1f75d66f)
+
+<li> Another greedy approach <b>that works</b>: Men propose in rank order and Women engage with the best offer. [Men and Women here are just agents prefering their partners accordingly and this is generally applicable.] </li>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/06852d53-7caf-4e5f-9aae-6fe61286f8d4)
+
+According to the algorithm, men who are single propose to the first woman of their preference list and the women accept the first person(who is still single before he engages with another woman) and gets engaged.
+
+Scenarios:
+
+<li>Woman who receives no proposal => Nothing to do.</li>
+
+<li>Woman W that is engaged to a man M => Receives propsal from M<sup>'</sup>. </li>
+
+Now, M<sup>'</sup> proposes to W and according to the preference list W prefers M<sup>'</sup> over M ( but the proposal was not received earlier because M prefers some other woman W<sup>'</sup> over W and as that woman is engaged he now comes to W.). As this could create a <b>Blocking pair</b> in the final matching if W remains with M (as she prefers M<sup>'</sup> over M), it is better off according to the greedy approach to break off the engagement with M and get engaged with M<sup>'</sup>
+
+This repeats as long as any of the men are single. And eventually ends. [The implementation and other details are going to be in the implementation folder.]
