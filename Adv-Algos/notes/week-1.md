@@ -116,7 +116,7 @@ Each class has a ( S<sub>p</sub>, f<sub>p</sub> ). The following is the schedule
 
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/096fe016-b4d8-436c-b57f-b620889681aa)
 
-Possible strategies:
+Possible strategies: <br>
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/8a1bf56a-2086-4b29-873a-79643e2caa9d)
 
 But all the strategies fail to give the optimal scheduling. 
