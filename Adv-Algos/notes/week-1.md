@@ -90,8 +90,8 @@ Why this works? Lower length values have more priority while also higher frequen
 
 <b> Proof: </b>
 
-Assume:
-![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/4d931e0a-4868-464b-ba03-45608f89d672)
+Assume: <br>
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/4d931e0a-4868-464b-ba03-45608f89d672) <br>
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/c22c6e1f-0367-4d32-950e-6feef9fc5c53)
 
 Suppose, this is optimal and has L<sub>a</sub> / f<sub>a</sub> > L<sub>b</sub> / f<sub>b</sub>.
