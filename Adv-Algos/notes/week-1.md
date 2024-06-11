@@ -1,1 +1,111 @@
+## Week-1
+### This course is a follow-up to an Algorithms course. This week is a Refresher on Greedy Algorithms
+<br>
 
+
+  <b>The Problem of Storing Files on Tape:</b>
+<li>We have n files that we want to store on a magnetic tape. Each file F<sub>i</sub> has a length of L<sub>i</sub>.</li>
+<li>Cost of accessing a stored file<sub>i</sub> is &Sigma;<sup>i=j</sup><sub>i=0</sub>L<sub>i</sub> </li>
+<br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/1962aa37-9c3e-4eb3-a72b-78a51859214e)
+
+<li>Expected cost of reading a random file:
+  
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/98303168-eadb-4dc4-9115-8ec965aa892d)
+
+</li>
+
+Random ordering does not give an optimal cost as the accessing cost is sum of lengths each.
+So, which order minimizes the expected cost?
+<br>
+
+#### Type-1
+<div>
+<b>Q.</b> Consider the ordering as &pi; and &pi;(i) is the index of the file stored at location i, while i starts from 0.
+
+<b>A.</b> A strategy that <b>feels</b> natural: store the files in increasing order of length.
+But this does not solve the question. A proof is required to prove the correctness of the algorithm and the course follows the same order.
+
+### Derivation:
+
+<b>Lemma:</b> E(cost) is minimized when L<sub>&pi;(i+1)</sub> >= L<sub>&pi;(i)</sub> &forall;i
+
+<b>Proof:</b>
+Suppose &pi; is optimal & &exist;i s.t L<sub>&pi;(i+1)</sub> < L<sub>&pi;(i) (contradiction)
+
+Let's compare the costs of accessing in both ordering:
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/ab1620cf-8c7e-467f-85ec-e42ca16f58d7)
+
+and the cost of accessing all the other files than these is the same obviously. <br>
+Let's say the cost of access before F<sub>i</sub> is X in both cases and the cost of accessing file after both these is Y in both cases. (Of course it is the summation so it is the same.)
+
+Cost of accessing the shorter file in first case is X+Length of &pi;(i)+Length of &pi;(i+1) and in second case is X+Length of &pi;(i+1). <br>
+So, the difference between the:
+
+Cost<sub>2</sub> - Cost<sub>1</sub> = -L<sub>i</sub>
+
+For the case of long file:
+
+Cost<sub>2</sub> - Cost<sub>1</sub> = L<sub>(i+1)</sub>
+
+As L<sub>(i+1)</sub> < L<sub>i</sub> from the assumption, and the Cost<sub>2</sub> > Cost<sub>1</sub>, by contradiction it is evident that second ordering is optimal compared to the first one.
+
+Summary:
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/022e94fb-5d7f-4f95-836e-80b5f3637b11)
+
+</div>
+
+#### Type-2
+
+Suppose, now we are also given the information about the frequencies with which these files are accessed. Every F<sub>i</sub> will be access f<sub>i</sub>.
+
+Now, <br>
+ the Total cost using the ordering &pi; = &Sigma;<sub>(k=1 to n)</sub>f<sub>&pi;(k)</sub> . { &Sigma;<sub>(k=1 to n)</sub>L<sub>&pi;(i)</sub> } = &Sigma;<sub>(k=1 to n)</sub> &Sigma; <sub>(i=1 to k)</sub> f <sub>&pi;(k)</sub> .L<sub>&pi;(i)</sub>
+
+ <b>Q.</b> Which order minimizes the total cost? <br>
+ <b>A.</b> If all the file lengths are equal: sort by decreasing frequencies. If all the frequencies are equal: sort by increasing file lengths. But what if there are shorter files with less frequencies or longer files with higher frequencies in this order ? 
+Goal: Sort according to some function: g(f,l) that <b>prioritizes high frequency and small length files.</b>
+
+ Suppose the function has the following form, <br>
+     <b>g(f,l) = l-f</b>, <br> and we have 2 files  with file 1: f<sub>1</sub> = 1, l<sub>i</sub>=3 => g(f,l) = 2
+ <br> and file 2: f<sub>2</sub> = 2, l<sub>2</sub> = 5, g(l,f) = 3<br>
+and if the files are ordered according to the lowest value of the function g. Then the ordering will be: A,B. <br>
+So, now the cost to access B = 1X3 + 2X(3+5) = 19 [ because whenever you access B you need to access both A and B ].
+
+While the optimal order is: <b>B,A</b>,
+giving a cost of accessing B = 2X5+1X(3+5) = 18 < 19.
+
+This function does not work. So lets look at a function that works:
+
+<b>Sort by the ratio: L/f </b>
+
+Why this works? Lower length values have more priority while also higher frequency values have more priority.
+
+### Derivation:
+
+<b>Lemma</b>: Total cost &pi; is minimized when L<sub>&pi;(i)</sub> / f<sub>&pi;(i)</sub> <= L<sub>&pi;(i+1)</sub> / f<sub>&pi;(i+1)</sub> &forall; i
+
+<b> Proof: </b>
+
+Assume:
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/4d931e0a-4868-464b-ba03-45608f89d672)
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/c22c6e1f-0367-4d32-950e-6feef9fc5c53)
+
+Suppose, this is optimal and has L<sub>a</sub> / f<sub>a</sub> > L<sub>b</sub> / f<sub>b</sub>.
+
+Now, swap the files:
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/f777f54c-0609-42f4-ad41-e3fc4e18b6ef)
+
+Now if the cost in the ordering &pi;<sup>'</sup> is lesser than that of &pi;, through contradiction our algorithm/function is proved.
+
+Now, the additional cost to pay because of swapping is = f<sub>a</sub> X L<sub>b</sub> and the reduced cost due to swapping is = f<sub>b</sub> X L<sub>a</sub>.
+
+However, by reordering our assumption's inequality, it is clear that L<sub>a</sub> X f<sub>b</sub> >  L<sub>b</sub> X f<sub>a</sub>. 
+
+Hence, the reduced cost is greater than the additional cost to be paid, proving a contradiction to our assumption, i.e. a more optimal inequality than the assumed inequality.
+
+### Scheduling Classes Problem:
