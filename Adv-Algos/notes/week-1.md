@@ -194,3 +194,13 @@ Scenarios:
 Now, M<sup>'</sup> proposes to W and according to the preference list W prefers M<sup>'</sup> over M ( but the proposal was not received earlier because M prefers some other woman W<sup>'</sup> over W and as that woman is engaged he now comes to W.). As this could create a <b>Blocking pair</b> in the final matching if W remains with M (as she prefers M<sup>'</sup> over M), it is better off according to the greedy approach to break off the engagement with M and get engaged with M<sup>'</sup>
 
 This repeats as long as any of the men are single. And eventually ends. [The implementation and other details are going to be in the implementation folder.]
+
+<ol><b> Properties satisfied by the above algorithm: </b>
+<li>The algorithm terminates in all instances and is never stuck in an infinite loop.</li>
+<li>Every man is matched to a woman and nobody is left single after the matching is done, called as Stable Matching.</li>
+<li>And this match is stable stating there are no blocking pairs.</li>
+</ol>
+
+Note: It is important to understand that in the algorithm men never propose to women that have already rejected them and women never accept proposals from such men.
+
+This algorithm is called Gale-Shapley or GS-Algorithm attributed to them and also called as Deferred Acceptance algorithm.
