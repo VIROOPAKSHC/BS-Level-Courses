@@ -5,11 +5,11 @@ class FileStorage:
         self.frequencies = frequencies
     
     def get_input(self):
-        self.N = 10 # int(input())
-        self.file_lengths = [45, 25, 20, 50, 90, 10, 20, 45, 55, 70] # list(map(int,input().split()))
-        freq = "t" # input("Entering Frequencies? T/F: ")
+        self.N = int(input())
+        self.file_lengths = list(map(int,input().split()))
+        freq = input("Entering Frequencies? T/F: ")
         if freq.lower()=="t":
-            self.frequencies = [3,1,3,4,5,7,9,3,6,5] # list(map(int,input().split()))
+            self.frequencies = list(map(int,input().split()))
     
     def CalculateCost(self,l):
         N = len(l)
