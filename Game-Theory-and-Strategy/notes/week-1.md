@@ -94,3 +94,66 @@ Types of Games:
     <td>Extensive form game with incomplete information (This is not discussed in this course.)</td>
   </tr>
 </table>
+<br>
+<b>Terminology in a strategic environment:</b>
+<li>Players: Everyone who affects decision makers' earnings.</li>
+<li>Actions: Actions available to each player.</li>
+<li>Payoffs or Preferences: Number associated with each outcome. Reflect the interests of the players.</li>
+<li></li>
+<br>
+<b>Prisoner's Dilemma: </b> There have been a crime and the police have arrested 2 possible suspects for the crime and are investigating them independently in different cell rooms without each knowing what the other said. The police have given them an offer if they confess what they know and the prisoner's already know what happens if they nobody confesses (minimal punishment of 1 year for each). The police offered to let them walk away if they confess the crime is committed by the other, while the other gets 20 years jail. Now the prisoners are the players in this game with possible choices - C,D (confess and do not respectively).If both of them confess then 5 years of jail punishment for each.
+<br>
+Strategic Form representation:
+<table>
+  <tr>
+    <th> </th>
+    <th>Suspect 2 - C</th>
+    <th>Suspect 2 - D</th>
+  </tr>
+  <tr>
+    <td>Supect 1 - C</td>
+    <td>(-5,-5)</td>
+    <td>(0,-20)</td>
+  </tr>
+  <tr>
+    <td>Suspect 2 - D</td>
+    <td>(-20,0)</td>
+    <td>(-1,-1)</td>
+  </tr>
+</table>
+
+<br>
+<b>Formal Characterization of the game:</b>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Set of Players</td>
+    <td>P1,P2</td>
+  </tr>
+  <tr>
+    <td>Set of Actions for Each player</td>
+    <td>A<sub>1</sub>={C,D}, A<sub>2</sub>={C,D}</td>
+  </tr>
+  <tr>
+    <td>Set of Rules</td>
+    <td>Choose either C or D simultaneously</td>
+  </tr>
+  <tr>
+    <td>Set of Outcomes</td>
+    <td>O = {(C,C), (C,D), (D,C), (D,D)}</td>
+  </tr>
+  <tr>
+    <td>Payoff</td>
+    <td>U<sub>1</sub>(o), U<sub>2</sub>(o)</td>
+  </tr>
+</table>
+<br>
+<b>How are the rules for a game defined?</b>
+<br>
+<li>Timing of the moves: Are they simultaneous or sequential?</li>
+<li>Nature of conflict of resolution: Will players interact once or repeatedly?</li>
+<li>Informational Conditions : Are some players better informed?</li>
+<li>Enforceability of Agreement: Can contracts be enforced?</li>
