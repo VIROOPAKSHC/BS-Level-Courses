@@ -55,3 +55,42 @@ The payoff = -time-taken. So for ACB = -[45 + X<sub>ACB</sub>/100] similarly for
 Drawing a table like above can help make a good decision.
 <br><br>
 
+<b> Game Classifications: </b> Sequential and Simultaneous.<br>
+In Simultaneous games, nobody is already aware of the decisions of others. In Sequential games, players are aware of the earlier decisions taken by other players, in this setting we can see the game progress and can draw a Game Tree. <br>
+Simultaneous - Static Setting<br>
+Sequential - Dynamic Setting<br>
+<br>
+```
+Types of Games:
+│   
+│       
+│
+└───Co-operative games 
+│   │   
+│   │    Transferable Utility   
+│   │   Non-transferable utility
+│   
+└───Non-cooperative games
+    │   Complete Information
+    │   Incomplete Information
+```
+<br>
+<table>
+  <tr>
+    <th> </th>
+    <th>Complete Information</th>
+    <th>Incomplete Information</th>
+  </tr>
+  <tr>
+    <td>Static</td>
+    <td>Normal Form game with complete information.</td>
+    <td>Normal Form game with Incomplete information.</td>
+  </tr>
+  <tr>
+    <td>
+      Dynamic
+    </td>
+    <td>Extensive form game with complete information</td>
+    <td>Extensive form game with incomplete information (This is not discussed in this course.)</td>
+  </tr>
+</table>
