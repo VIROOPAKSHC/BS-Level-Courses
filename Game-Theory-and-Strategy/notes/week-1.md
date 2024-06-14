@@ -157,3 +157,137 @@ Strategic Form representation:
 <li>Nature of conflict of resolution: Will players interact once or repeatedly?</li>
 <li>Informational Conditions : Are some players better informed?</li>
 <li>Enforceability of Agreement: Can contracts be enforced?</li>
+<br>
+<br>
+Consider there's an Acquirer(A) and a target (T). The Target puts a price of $ 50 on the item A is trying to acquire and A can only give bids of $ 25 multiples. As A acquires T its value increases by 50% - 1.5 * X = 75. Now is a <b>complete information game</b> because we know how the game progress:
+<table>
+  <tr>
+    <td>Reply to the Offer -> </td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Bidding Amount</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>(75,0)</td>
+    <td>(0,50)</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>(50,25)</td>
+    <td>(0,50)</td>
+  </tr>
+  <tr>
+    <td>50</td>
+    <td>(25,50)</td>
+    <td>(0,50)</td>
+  </tr>
+  <tr>
+    <td>75</td>
+    <td>(0,75)</td>
+    <td>(0,50)</td>
+  </tr>
+</table>
+
+<br>
+<br>
+Now if the T does not know if he is sure of giving it at $ 50 or $ 100 with probability of 1/2 each, then it becomes an <b>incomplete information game</b> because now there is not a single certain game being played. The above tables comes with a probability of 1/2 and there's going to be another table with a probability of 1/2
+<br>
+
+<b>Incomplete Information game:</b> when there exists a player who is not certain about which game is being played.
+<br> Acquirer's idea about the value comes from a probability distribution over possible value.
+<br>
+<b>Dominant, Dominate and Dominated Actions:</b>
+An action(a) from player (i) dominates action (b) if 'a' leads to better outcomes than 'b' for player(i) no matter what other players are doing. Here, (b) is dominated by (a). An action(a) for player (i) is called a dominant action if 'a' dominates all other actions of player (i).
+<br>
+From our above Prisoner's Dilemama game: it appears to be better for the second person to confess whatever might be the action of the first person because it is the best action. Hence, Confess is a dominant strategy for the second person. 
+<br>
+<br>
+<b>Pure Action vs Mixed action :</b>
+A mixed action is a probability distribution over that player's pure actions. <br>
+<em>Consider the following example to understand Pure action and mixed action:</em>
+<table>
+  <tr>
+    <th> </th>
+    <th>2nd player - L</th>
+    <th>2nd player - R</th>
+  </tr>
+  <tr>
+    <td>1st player - U</td>
+    <td>(3,2)</td>
+    <td>(0,5)</td>
+  </tr>
+  <tr>
+    <td>1st player - M</td>
+    <td>(0,5)</td>
+    <td>(3,2)</td>
+  </tr>
+  <tr>
+    <td>1st player - D</td>
+    <td>(1,1)</td>
+    <td>(1,1)</td>
+  </tr>
+</table>
+<br>
+If you consider every single action of 1st player U,M,D then individually they aren't dominant over others. But if you consider a mixed action:
+{(1/2)U + (1/2)M} = U with a probab of 1/2 and M with a probab of 1/2 has a total payoff of 1.5 inboth L and R actions of the 2nd player. This is higher than 1 in both cases and now {(1/2)U + (1/2)M} is a dominant action. <br>
+<br>
+<b>Delection Action Profile:</b>
+<li>Action Profile: Writing actions of all the player - (a1,a2,a3,...an)</li>
+<li>Deleted Action: Instead of writing every action which is cumbersome, read the important action of the ith player, it is moved to the front. - (ai,a1,a2,....,an)</li>
+<br>
+<b>Weakly and Strictly Dominant Action: </b>
+In the following case: U dominated action D of player 1 in only a single action of player 2 while the payoff in the second case is same, hence it is dominant too but weakly.<br>
+<table> 
+  <tr>
+    <td></td>
+    <td>L</td>
+    <td>R</td>
+  </tr>
+  <tr>
+    <td>U</td>
+    <td>(1,0)</td>
+    <td>(0,0)</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>(0,0)</td>
+    <td>(0,0)</td>
+  </tr>
+</table>
+<br>
+<b> Formal Definition: </b> A strictly dominant strategy is U<sub>i</sub>(a<sub>i</sub>,a<sub>-i</sub>) > U<sub>i</sub>(a<sup>'</sup><sub>i</sub>, a<sub>-i</sub>) &forall; a<sub>-i</sub>.
+In the case of weakly dominant strategy it is &ge; instead of strictly greater.
+<br>
+<br>
+### Differences in Game theory:
+<b>Cooperative Game Theory: </b> Coalition formation to coordinate their actions. Making Binding agreements and Pooling their winnings.<br>
+<b>Natural Questions in Cooperative Game Theory :</b>Which coalition will form? How do we distribute the gain/cost?<br>
+<b>Assumptions: </b> Rational Behaviour. Unlimited Communication. Unlimited ability to make a binding agreement.<br>
+<b>Goal in these types:</b> To characterize the set of possible coalition that may emerge.
+<br><br>
+In the non-cooperative games:
+A detailed model of the situation, focus on procedure and May/May not have conflicting goals.
+<br>
+<b>Natural Questions: </b> What would be the outcome of this interaction?<br>
+<b>Assumptions:</b> Rational Behavior. <br>
+<b>Goal in these types:</b> To obtain outcome.<br>
+
+<br>
+<b>Solving the Game: </b>
+What does it mean? We impose some restriction that is acceptable by the players to move forward in the game. Which is also called an <b>Equilibrium</b>
+<br>
+<b>Equilibrium</b> State of balance when all the forces are balanced. A state that doesn't change on its own. Or a state where neither of the players do not want to change their actions after taken ( given a chance they would not like to change their actions also called no regret )
+<br>
+From the prisoner's dilemma: if the first player chooses to C and second player chooses to D then later if given a chance D would like to choose C instead of D because he would have a better payoff that way. This is not an equilibrium. However, if both choose C then no one would want to improve and that is an equilibrium because no one is interested in modifying to increase their payoffs.<br><br>
+Even if D,D is chosen, if given a chance the second player or the first player would want to change to D,C or C,D because they would be able to increase their payoff from -1 to 0 each. Hence this is not an equilibrium too.<br>
+Only equilibrium in that situation is to choose C,C and this is also called <b>Nash Equilibrium.</b>
+<br>
+<b>Assumptions:</b>
+Rationality - players are perfect in decision-making : able to compare choices, consistent in decision-making, maximize their pay-offs, perfect recall and perfect calculators.
+<br>
+Common Knowledge - I know "X", Everyone knows "X", All players know "x", All know that all know "X", and so on...
