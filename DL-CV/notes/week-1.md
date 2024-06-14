@@ -7,20 +7,20 @@
 <br>
 Muller-Lyer Illusion - Which line is longer?
 <br>
-![temp](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/d9ff145e-010a-43da-b56d-455dfc3f82c6)<br>
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/72e12d6a-c951-46a8-b776-c730baaa362b)
+<br>
 <br>
 Actually, both are of the same length.
 <br>
 Variation of Hermann grid Illusion: What do yu see at the intersections? <br>
-![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/f7f56250-427e-4dd2-991a-071efb4a2459) <br>
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/09b77380-4929-4a0c-9a3d-318c2d996df8) <br>
 <br>
 Adelson's brightness constancy illusion: Which is brighter, A/B?
 <br>
-![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/5abd7c37-4f68-4fb8-a50b-dd7f199bbb32)
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/00f48ce5-d89b-4492-90dd-267e1102d5dc)
 <br><br>
 Count the red Xs in both figures, which is harder?<br>
-![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/1548e837-0671-4635-ba3b-5358f38f6bc4)
-<br><br>
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/0477710f-5610-4887-a294-782a27d86568)<br><br>
 2) Many practical use cases are inverse model applications. 
 <br> No knowledge of how an image was taken or camera parameters - but need to model the real world in which the picutre/video was taken => Need to almost always model from incomplete/partial noisy information.<br><br>
 3) High-dimensional data = > Heavy computational requirements.<br><br>
