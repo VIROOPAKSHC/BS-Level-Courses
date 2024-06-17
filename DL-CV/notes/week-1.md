@@ -7,20 +7,28 @@
 <br>
 Muller-Lyer Illusion - Which line is longer?
 <br>
+
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/72e12d6a-c951-46a8-b776-c730baaa362b)
+
 <br>
 <br>
 Actually, both are of the same length.
 <br>
 Variation of Hermann grid Illusion: What do yu see at the intersections? <br>
+
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/09b77380-4929-4a0c-9a3d-318c2d996df8) <br>
+
 <br>
 Adelson's brightness constancy illusion: Which is brighter, A/B?
 <br>
+
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/00f48ce5-d89b-4492-90dd-267e1102d5dc)
+
 <br><br>
 Count the red Xs in both figures, which is harder?<br>
+
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/0477710f-5610-4887-a294-782a27d86568)<br><br>
+
 2) Many practical use cases are inverse model applications. 
 <br> No knowledge of how an image was taken or camera parameters - but need to model the real world in which the picutre/video was taken => Need to almost always model from incomplete/partial noisy information.<br><br>
 3) High-dimensional data = > Heavy computational requirements.<br><br>
@@ -77,7 +85,9 @@ Count the red Xs in both figures, which is harder?<br>
 ### Image Representation
 <b>If visible light spectrum is VIBGYOR, why RGB colour representation?</b>
 <br>
+
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/ffff8703-bbaa-4a12-9b87-ee76de6d0780)
+
 <br>
 Long(red), Mediumm(green), and Short(blue) cones, plus intensity rods are enough to cover the spectrum at specific wavelengths.<br>
 <b>Image as a Matrix:</b>
@@ -98,15 +108,116 @@ Contrast Reversing:<br>
 I<sup>'</sup>(m<sub>0</sub>,n<sub>0</sub>) = I<sub>MAX</sub> - I(m<sub>0</sub>,n<sub>0</sub>) + I <sub>MIN</sub>. 
 <br><br>
 Contrast Stretching:<br>
+
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/5e084951-361d-4c0a-807b-39077afc8ee5)
+
 <br>
-<b>Histogram Equalization:</b> is a method in image processing of contrast adjustment using the image's histogram.<br>
+<b>Histogram Equalization:</b> is a method in image processing of contrast adjustment using the image's histogram.
+Let I be the image with M X N pixels in total; I<sub>MAX</sub> be the maximum image intensity value (255); h(I) be the image histogram.<br>
+Integrate h(I) to obtain the cumulative distribution c(I), whose each value c<sub>k</sub> = (1/MXN)(&Sigma;<sub>l=1 to k</sub>h(l)).<br>
+The transformed image I'(i,j) = I<sub>MAX</sub> x c<sub>p<sub>ij</sub></sub><br>
 <br>
 <b>Use of Single Point Operations :</b>
-<li>Single point's intensity is influenced by multiple factors, and may not tell us everything.</li>
+<li>Single point's intensity is influenced by multiple factors, and may not tell us everything - Light source, direction, surface geometry, material and nearby surfaces.</li>
 <li>Given a camera and a still scene, how do you reduce noise using point operations?</li>
 <li>Take many images and average them.</li>
 <li>You need local operations otherwise. Examples: Moving Average. </li>
 <br>
 <b>Global Operations Examples: Fourier transform, etc other transformations.</b>
+<br>
+<br>
+<b>Image Filters: Linear Filter :- </b>
+Modify the image pixels based on some function of a local neighbourhood of each pixel. E.g.
+<table>
+  <tr>
+    <td>0</td>
+    <td>5</td>
+    <td>3</td>
+  </tr>
+    <tr>
+    <td>4</td>
+    <td>5</td>
+    <td>1</td>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>6</td>
+    </tr>    
+</table>
+ => apply a function = mean of all values and replace it in the center element =>
+<table>
+ <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>    
+</table>
+
+<b>Linear Filter: </b>
+Replace each pixel by linear combination of neighbours.Linear combination called kernel, mask or filter.<br>
+<table>
+  <tr>
+    <td>10</td>
+    <td>5</td>
+    <td>3</td>
+  </tr>
+    <tr>
+    <td>4</td>
+    <td>5</td>
+    <td>1</td>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>6</td>
+    </tr>    
+</table>
+=> Kernel<br>
+<table>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+    <tr>
+    <td>0</td>
+    <td>0.5</td>
+    <td>0</td>
+    </tr>
+    <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0.5</td>
+    </tr>    
+</table>
+=>
+<table>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+    <tr>
+    <td> </td>
+    <td>6.5</td>
+    <td> </td>
+    </tr>
+    <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    </tr>    
+</table>
+Modified image data.
 <br>
