@@ -389,7 +389,6 @@ and sqrt(&sigma;<sub>1</sub>u<sub>1</sub>) and sqrt(&sigma;<sub>1</sub>v<sub>1</
 
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/24b0901e-b3af-4398-856c-eeba124c933d)
 
-<br>
 <b>Is Correlation still useful?</b>
 <br>
 <li>Can be used for Template matching.</li>
@@ -397,11 +396,9 @@ and sqrt(&sigma;<sub>1</sub>u<sub>1</sub>) and sqrt(&sigma;<sub>1</sub>v<sub>1</
 
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/10e6682d-5864-4c85-b137-36f149c48569)
 
-<br>
 
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/43a01bc4-acc4-4681-9f5f-0eba7a501a3d)
 
-<br>
 
 <b>Non-linear filters:</b>
 <li>Different types of noise in images</li>
@@ -412,8 +409,6 @@ and sqrt(&sigma;<sub>1</sub>u<sub>1</sub>) and sqrt(&sigma;<sub>1</sub>v<sub>1</
 
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/6a0de31d-8de3-4914-b06d-ad66d540e521)
 
-<br>
-<br>
 
 <b>Median filter </b>- Replace each pixel with MEDIAN value of all pixels in the neighbourhood.
 <li>Non-linear</li>
@@ -424,7 +419,6 @@ and sqrt(&sigma;<sub>1</sub>u<sub>1</sub>) and sqrt(&sigma;<sub>1</sub>v<sub>1</
 
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/4d52ebd6-e602-4ba8-836b-5521c6d93c7e)
 
-<br>
 <b>Non-Linear filters: Bilateral filtering</b><br>
 <li>Noise removal comes at expense of image blurring at edges.</li>
 <li>Bilaterial filtering - simple, non-linear edge-preserving smoothing.</li>
@@ -441,6 +435,6 @@ Example of Bilateral filters:<br>
 
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/e69f9429-bc2c-4700-a1e3-39544ed92da3)
 
-<br>
+
 
 
