@@ -13,9 +13,10 @@ Similarly, Weakly dominant strategy equilibrium can be defined as the pay-offs n
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/895860aa-e1a1-4c96-b5c2-9c4419dee54a)
 
 ### IESDS and IEWDS: 
-<b>Iterated Elimination of Strictly dominated strategies: </b>
-Eliminate the strategies that are not strictly dominating by comparing the payoffs 2 actions of a player under every action of the other player.
-This elimination might result in a pair of actions for both the players that is beneficial for both of them and no regret state.
+<b>Iterated Elimination of Strictly dominated strategies: </b> <br>
+
+In the first step, at most one dominated strategy is removed from the strategy space of each of the players since no rational player would ever play these strategies. This results in a new, smaller game. Some strategies—that were not dominated before—may be dominated in the smaller game. The first step is repeated, creating a new even smaller game, and so on. The process stops when no dominated strategy is found for any player. This process is valid since it is assumed that rationality among players is common knowledge, that is, each player knows that the rest of the players are rational, and each player knows that the rest of the players know that he knows that the rest of the players are rational, and so on ad infinitum
+
 <br>
 <em> Example: 1 - Consider the following tabular matrix and eliminate the strictly dominated strategies.</em>
 
