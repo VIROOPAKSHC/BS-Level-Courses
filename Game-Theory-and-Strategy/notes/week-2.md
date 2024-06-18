@@ -53,3 +53,11 @@ Iterated dominance: remove (strictly/weakly) dominated strategy, repeat. If iter
 <br>
 <em>Iterated weak dominance strategy is path-dependent while Iterated strict dominance is path-independet meaning the elimination process will always terminate at the same point.</em>
 <br>
+
+<b> Nash Equilibrium: </b>
+<br>
+By utlizing the concept of optimization, it can be understood as the optimal state in which the actions of both the players are optimal according to each and even if given a chance, they would not want to modify their actions. <br>
+<br>
+${a_i^* \in argmax U_i(a_i,a_i*)}$ where a<sup>*</sup><sub>i</sub> is the optimal action of the player-i.<br>
+<br>
+This is called the Best Response of a<sub>i</sub> given the actions of the remaining players. <br>
