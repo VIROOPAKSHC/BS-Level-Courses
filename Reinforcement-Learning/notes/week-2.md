@@ -1,4 +1,4 @@
-## Week-2
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/68df28ba-a84b-46ec-a24c-b476ff27b142)## Week-2
 
 <b>Action at a Temporal Distance: </b>
 <li>Here, there is no immediate feedback.</li>
@@ -86,5 +86,65 @@ Finally, consider the transition probabilities and rewards.<br>
 
 ![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/09e3f4d2-d23b-4d03-8ec8-5ab90158d5f9)
 
+
+An agent learns a policy at step t, &pi; : a mapping from states to action probabilities.<br>
+&pi;<sub>t</sub>(s,a) = probability that a<sub>t</sub> = a when s<sub>t</sub> = s.<br>
+<li>Reinforcement learning methods specify how the agent changes its policy as a result of experience.</li>
+<li>Roughly, the agent's goal is to get as much reward as it can over the long run.</li>
+
 <br>
+
+<b>Returns: </b>
+Suppose the sequence of rewards after step t is: r<sub>t+1</sub>, r<sub>t+2</sub>,....<br>
+We want to maximize the return G<sub>t</sub>, for each step defined as the sum of rewards after time step t. <br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/0596928e-b825-4d07-9d4c-ef142d3c510a)
+
+<b>Returns for Continuing Tasks: </b>
+Continuing tasks are tasks that does not have natural epsisodes. <br>
+Discounted Return: <br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/63b4cac2-4c95-46cd-be91-9149b8847a33)
+
+In general, we want to maximize the expected return E{G<sub>t</sub>} for each t.<br>
+
+<b>Value Functions: </b>
+Expected future rewards starting from a state( or state-action pair ) and following policy &pi; <br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/dd5dddd5-0ef4-46a0-ade1-3b54e6f97a4f)
+
+<em>Recycling Robot Example: 
+Mobile Robot to collect empty soda cans at different locations in a room, sensors for detecting cans and the distances, arms and grippers for pick up and placement of cans, and control system for navigation and arms, and gripper.<br>
+Room has empty soda cans, recharge station. <br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/32b76079-a60a-4e33-8917-18b0c640afe6)
+
+<b>Agent-Environment interface: </b><br>
+Navigation: Move close to cans, torque to motors, +ve reward if bot is withing &delta; distance and -ve reward if bot topples.<br>
+Pick and Place: Pick a can and dump it into the bin, torque to motors, +ve reward if bot picks and places, and -ve reward if bot fumbles.<br>
+Search: Search for cans, Seach, wait or recharge, +ve reward if bot collects a can, and -ve reward if bot's charge goes to zero.<br>
+States and Actions:<br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/58cf12d0-2d0d-407c-ab97-e2613381c1f4)
+
+
+Transitions and Rewards:<br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/d9272f14-9960-464d-8640-033be1d0f295)
+
+Finite MDF - tabular form: <br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/5f2e8959-5d9a-4403-bb6c-b87f8c5460be)
+
+Deterministic Policy: <br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/064a6156-9029-4fac-acf6-ab6122b75019)
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/fc9850b0-1d5a-4a31-b4b1-10f7a81c559e)
+
+Value function:
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/60204fd6-9983-43e6-9845-f088723c31e9)
+
+</em>
 
