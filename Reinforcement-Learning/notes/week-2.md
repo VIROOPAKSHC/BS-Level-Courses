@@ -1,4 +1,4 @@
-![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/68df28ba-a84b-46ec-a24c-b476ff27b142)## Week-2
+## Week-2
 
 <b>Action at a Temporal Distance: </b>
 <li>Here, there is no immediate feedback.</li>
@@ -148,3 +148,23 @@ Value function:
 
 </em>
 
+<em>Example 2 - Haunted House <br>
+Letter received:
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/b10bdf28-e696-415c-b82b-874002041f7f)
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/94b6900b-61b5-4034-9dfd-1fedb1699841)
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/4d1cffee-ea82-4b1b-8ee2-85c002522c86)
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/b0b868b3-20d0-41ca-8403-355e486bb044)
+
+Policy, Trajectory and Return: <br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/ac827a1e-e027-40bd-b4b4-e4aef0da8eed)
+
+&gamma; = 0.9 => Value Functions: <br>
+
+![image](https://github.com/VIROOPAKSHC/BS-Level-Courses/assets/69083163/799d2522-f7a6-4fae-a1a8-bf043d7fded1)
+
+</em>
