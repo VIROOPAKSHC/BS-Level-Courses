@@ -292,3 +292,4 @@ Pr(atleast one among remaining n-1 reporting) = 1 - Pr(no one reporting) = 1 - (
 p = 1 - (C/V)<sup>1/(n-1)</sup> <br>
 therefore as n incrases, p increases <br>. So if there are more people in the area, the chance of reporting increases.<br>
 <br>
+<br>
