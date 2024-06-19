@@ -28,3 +28,12 @@ Derived by expanding the function initially. <br>
 <br>
 For finite MDPs, policies can be partially ordered: &pi; &ge; &pi;' iff v<sub>&pi;</sub>(s) &ge; v<sub>&pi;'</sub> (s) &forall; s &isin; S <br>
 <br>
+There is always at least one (and possibly many) policies that is better than or equal to all the others. This is an optimal policy. We denote them all &pi;<sub>*</sub>. <br>
+Optimal policies share the same optimal state-value function:
+<br>
+
+${ v_* ( s ) = max_\pi v_\pi ( s ) \forall s \in S }$
+
+${ q_* (s,a) = max_\pi q_\pi (s,a) \forall s \in S, a \in A }$
+
+<br>
