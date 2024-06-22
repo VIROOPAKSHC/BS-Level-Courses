@@ -49,7 +49,7 @@ def k_bandit_simulation(time_step=1000,epsilon=0.1,k=10,method='sample_average',
 avg_rewards_sample,avg_actions_sample = k_bandit_simulation(time_step=10000)
 avg_rewards_non_stat,avg_actions_non_stat = k_bandit_simulation(time_step=10000,method='constant-step-size',alpha=0.1)
 
-plt.title("Average Actions Percentage vs Time steps")
+plt.title("Optimal Actions Percentage vs Time steps")
 plt.plot(range(time_step),avg_actions_sample)
 plt.plot(range(time_step),avg_actions_non_stat)
 plt.xlabel("time step")
