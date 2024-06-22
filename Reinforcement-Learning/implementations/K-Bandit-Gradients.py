@@ -54,3 +54,8 @@ plt.ylabel('Optimal action percentage')
 plt.plot(range(1000),avg_actions_grads)
 plt.show()
 
+plt.title("Average rewards vs time step")
+plt.xlabel("time step")
+plt.ylabel('Average rewards')
+plt.plot(range(1000),avg_rewards_grads)
+plt.show()
