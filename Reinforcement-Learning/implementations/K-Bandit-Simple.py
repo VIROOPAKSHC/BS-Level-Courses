@@ -39,8 +39,14 @@ for _ in range(num_prob):
 average_rewards = total_rewards/2000
 average_actions = (optimal_actions/20)
 
-plt.title("Average Rewards vs time steps")
+plt.title("Optimal Action percentage vs time steps")
 plt.xlabel("time step")
-plt.ylabel("Average Reward")
+plt.ylabel("Optimal action percentage")
 plt.plot(range(time_step),average_actions)
+plt.show()
+
+plt.title("Average rewards vs time steps")
+plt.xlabel("time step")
+plt.ylabel("Average reward")
+plt.plot(range(time_step),average_rewards)
 plt.show()
