@@ -24,8 +24,9 @@ for _ in range(num_prob):
         if np.random.random() < epsilon:
             A = np.random.randint(k)
         else:
-            A = np.argmax(Q)   
-        actions[t] = (A==np.argmax(q_star))
+            A = np.argmax(Q)
+
+        actions[t] = (A==np.argmax(q_star)) # Keeping track of the optimality of the action taken
 
         R = np.random.normal(q_star[A],1)
         N[A] = N[A] + 1
